@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #body {
+            background: #eee;
+        }
+
+        #clock {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: auto;
+            padding: 7%;
+            position: relative;
+            border: 2px solid #ffffff;
+            box-shadow: 0px 0px 20px rgba(158, 158, 202, 0.5);
+        }
+
+
+        #hour {
+            position: absolute;
+            width: 20%;
+            height: 4px;
+            background: #0f4c75;
+            top: calc(50% - 2px);
+            left: 30%;
+            border-radius: 4px;
+            transform: rotate(0deg);
+            transform-origin: right center;
+            box-shadow: 0px 3px 5px rgba(158, 158, 202, 0.5);
+
+        }
+
+        #minute {
+            position: absolute;
+            width: 40%;
+            height: 4px;
+            background: #3282b8;
+            top: calc(50% - 2px);
+            left: 10%;
+            border-radius: 4px;
+            transform: rotate(0deg);
+            transform-origin: right center;
+            box-shadow: 0px 3px 5px rgba(158, 158, 202, 0.5);
+        }
+
+        #second {
+            position: absolute;
+            width: 48%;
+            height: 2px;
+            background: #bbe1fa;
+            top: calc(50% - 1px);
+            left: 2%;
+            border-radius: 2px;
+            transform: rotate(0deg);
+            transform-origin: right center;
+            box-shadow: 0px 3px 5px rgba(158, 158, 202, 0.5);
+        }
+
+        .mark {
+            position: absolute;
+            width: 5%;
+            height: 2px;
+            background: #000;
+            top: calc(50% - 1px);
+            left: 45%;
+            transform-origin: right center;
+            background: #bbe1fa;
+        }
+
+        #text {
+            margin: auto;
+            position: relative;
+        }
+
+        #date {
+            width: 200px;
+            height: 50px;
+            margin: auto;
+            line-height: 50px;
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Share Tech Mono', monospace;
+            color: #1b262c;
+            text-shadow: 1px 1px 1px #eee;
+
+        }
+
+        #time {
+            width: 200px;
+            height: 100px;
+            margin: auto;
+            line-height: 100px;
+            text-align: center;
+            font-size: 50px;
+            font-family: 'Share Tech Mono', monospace;
+            color: #1b262c;
+            text-shadow: 1px 1px 1px #eee;
+        }
+
+
+        .filler {
+            background: #1b262c;
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 50%;
+            right: 0;
+
+        }
+
+        #number {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+
+        .h0,
+        .h1,
+        .m0,
+        .m1,
+        .s0,
+        .s1,
+        .break0,
+        .break1 {
+            position: absolute;
+            width: 24px;
+            height: 100px;
+            /* background: #FF0000; */
+            text-align: center;
+            font-size: 50px;
+            font-family: 'Share Tech Mono', monospace;
+
+        }
+
+        .h0 {
+            left: 0%;
+        }
+
+        .h1 {
+            left: 12.5%;
+        }
+
+        .break0 {
+            left: 25%;
+        }
+
+        .m0 {
+            left: 37.5%;
+        }
+
+        .m1 {
+            left: 50%;
+        }
+
+        .break1 {
+            left: 62.5%;
+        }
+
+        .s0 {
+            left: 75%;
+        }
+
+        .s1 {
+            left: 87.5%;
+            animation: move 1s forwards;
+        }
+
+
+
+        @keyframes move {
+            0% {
+                transform: translateY(0px);
+            }
+
+            100% {
+                transform: translateY(-60px);
+            }
+        }
+
+        .block {
+            position: absolute;
+            top: 5%;
+            width: 100%;
+            height: 50px;
+            background: #00FF00;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="filler"></div> -->
+    <div id="clock">
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div class="mark"></div>
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+    </div>
+    <div id="text">
+        <div id="date">2020-03-31</div>
+        <div id="time">00:00:00</div>
+    </div>
+
+    <!-- <div id="number">
+        <div class="block"></div>
+        <div class="h0">
+            <div class="number">0</div>
+            <div class="number">1</div>
+            <div class="number">2</div>
+            <div class="number">3</div>
+            <div class="number">4</div>
+            <div class="number">5</div>
+            <div class="number">6</div>
+            <div class="number">7</div>
+            <div class="number">8</div>
+            <div class="number">9</div>
+        </div>
+        <div class="h1">
+            <div class="number">0</div>
+            <div class="number">1</div>
+            <div class="number">2</div>
+            <div class="number">3</div>
+            <div class="number">4</div>
+            <div class="number">5</div>
+            <div class="number">6</div>
+            <div class="number">7</div>
+            <div class="number">8</div>
+            <div class="number">9</div>
+        </div>
+        <div class="break0">:</div>
+        <div class="m0">
+            <div class="number">0</div>
+            <div class="number">1</div>
+            <div class="number">2</div>
+            <div class="number">3</div>
+            <div class="number">4</div>
+            <div class="number">5</div>
+            <div class="number">6</div>
+            <div class="number">7</div>
+            <div class="number">8</div>
+            <div class="number">9</div>
+        </div>
+        <div class="m1">
+            <div class="number">0</div>
+            <div class="number">1</div>
+            <div class="number">2</div>
+            <div class="number">3</div>
+            <div class="number">4</div>
+            <div class="number">5</div>
+            <div class="number">6</div>
+            <div class="number">7</div>
+            <div class="number">8</div>
+            <div class="number">9</div>
+        </div>
+        <div class="break1">:</div>
+        <div class="s0">
+            <div class="number">0</div>
+            <div class="number">1</div>
+            <div class="number">2</div>
+            <div class="number">3</div>
+            <div class="number">4</div>
+            <div class="number">5</div>
+            <div class="number">6</div>
+            <div class="number">7</div>
+            <div class="number">8</div>
+            <div class="number">9</div>
+        </div>
+        <div class="s1">
+            <div class="number">0</div>
+            <div class="number">1</div>
+            <div class="number">2</div>
+            <div class="number">3</div>
+            <div class="number">4</div>
+            <div class="number">5</div>
+            <div class="number">6</div>
+            <div class="number">7</div>
+            <div class="number">8</div>
+            <div class="number">9</div>
+        </div>
+    </div> -->
+
+
+
+    <script>
+        const hour = document.getElementById("hour");
+        const minute = document.getElementById("minute");
+        const second = document.getElementById("second");
+        const date = document.getElementById("date")
+        const time = document.getElementById("time")
+        const markList = document.getElementsByClassName("mark")
+
+
+        const timeFixed = (num) => {
+            return num < 10 ? "0" + num : num;
+        }
+
+        const setDate = () => {
+            const now = new Date();
+            let chineseDay = ["天", "一", "二", "三", "四", "五", "六"];
+
+            let nHour = now.getHours();
+            let nMinute = now.getMinutes();
+            let nSecond = now.getSeconds();
+
+            let nYear = now.getFullYear();
+            let nMonth = now.getMonth();
+            let nDate = now.getDate();
+            let nDay = now.getDay();
+
+            hour.style.transform = `rotate(${nHour * 30 + 90}deg)`;
+            minute.style.transform = `rotate(${nMinute * 6 + 90}deg)`;
+            second.style.transform = `rotate(${nSecond * 6 + 90}deg)`;
+
+            date.innerText = `${nYear}-${timeFixed(nMonth + 1)}-${timeFixed(nDate)} 星期${chineseDay[nDay]}`
+
+            time.innerText = `${timeFixed(nHour)}:${timeFixed(nMinute)}:${timeFixed(nSecond)}`;
+        }
+
+        for (let i = 0; i < 60; i++) {
+
+            markList[i].style.transform = `rotate(${i * 6 - 90}deg) translateX(calc(1000%))`
+
+            if (i % 5 == 0) {
+                markList[i].style.background = "#0f4c75"
+            }
+
+        }
+
+        setDate();
+        setInterval(setDate, 1000);
+    </script>
+</body>
+
+</html>
