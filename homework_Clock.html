@@ -169,7 +169,7 @@
 
         .s1 {
             left: 87.5%;
-            animation: move 1s forwards;
+            animation: move 10s infinite forwards;
         }
 
 
@@ -179,8 +179,44 @@
                 transform: translateY(0px);
             }
 
-            100% {
+            10% {
                 transform: translateY(-60px);
+            }
+
+            20% {
+                transform: translateY(-120px);
+            }
+
+            30% {
+                transform: translateY(-180px);
+            }
+
+            40% {
+                transform: translateY(-240px);
+            }
+
+            50% {
+                transform: translateY(-300px);
+            }
+
+            60% {
+                transform: translateY(-360px);
+            }
+
+            70% {
+                transform: translateY(-420px);
+            }
+
+            80% {
+                transform: translateY(-480px);
+            }
+
+            90% {
+                transform: translateY(-540px);
+            }
+
+            100% {
+                transform: translateY(0px);
             }
         }
 
@@ -266,8 +302,7 @@
         <div id="time">00:00:00</div>
     </div>
 
-    <!-- <div id="number">
-        <div class="block"></div>
+    <div id="number">
         <div class="h0">
             <div class="number">0</div>
             <div class="number">1</div>
@@ -342,7 +377,9 @@
             <div class="number">8</div>
             <div class="number">9</div>
         </div>
-    </div> -->
+        <div class="block"></div>
+
+    </div>
 
 
 
